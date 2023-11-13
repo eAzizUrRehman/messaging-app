@@ -38,7 +38,6 @@
             placeholder="Write Something"
             v-model="searchValue"
             @keyup.enter="sendMsg"
-            
           />
         </div>
         <div class="send-msg-right">
@@ -100,7 +99,6 @@ export default {
           message: this.searchValue.trim(),
           fromMe: true,
         });
-        
       }
       this.searchValue = "";
     },

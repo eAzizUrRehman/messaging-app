@@ -1,8 +1,6 @@
 <template>
   <div class="chat-box">
-    {{ messages }}
-    <div v-for="(chat, index) in messages" :key="index">
-      
+    <div v-for="(chat, index) in chatHistory" :key="index">
       <Msg :chat="chat" />
     </div>
   </div>
@@ -12,24 +10,7 @@
 import Msg from "../components/Msg.vue";
 
 export default {
-  data() {
-    return {
-      messages:[]
-    };
-  },
-  props: {chatHistory:Array},
-  watch:{
-    chatHistory:{
-      immediate:true,
-      handler(val){
-        console.log(val)
-        if(val.length){
-          
-          this.messages=val
-        }
-      }
-    }
-  },
+  props: { chatHistory: Array },
   components: {
     Msg,
   },
@@ -41,6 +22,6 @@ export default {
   max-height: 470px;
   overflow-y: auto;
   padding-right: 20px;
-  margin-bottom:12px;
+  margin-bottom: 12px;
 }
 </style>

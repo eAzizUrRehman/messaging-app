@@ -42,8 +42,8 @@ export default {
   },
   computed: {
     activeUserData() {
-      let user=users.find((user) => user.id === this.activeUserId)
-      console.log(user)
+      let user = users.find((user) => user.id === this.activeUserId);
+      console.log(user);
       return user;
     },
   },
@@ -73,5 +73,4 @@ export default {
   padding: 30px 20px;
   width: 50%;
 }
-
 </style>

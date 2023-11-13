@@ -13,7 +13,6 @@ export default {
 </script>
 
 <style scoped>
-
 .msg {
   margin-block: 4px;
   width: 100%;
