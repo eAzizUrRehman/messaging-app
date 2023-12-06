@@ -8,8 +8,8 @@
 
 <script>
 export default {
-  props: ["chat"],
-};
+  props: ['chat']
+}
 </script>
 
 <style scoped>

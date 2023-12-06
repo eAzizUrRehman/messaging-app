@@ -17,37 +17,42 @@
 </template>
 
 <script>
-import Users from "./sections/Users.vue";
-import Chat from "./sections/Chat.vue";
-import Profile from "./sections/Profile.vue";
-import { users } from "./constants/index.js";
+import Users from './sections/Users.vue'
+import Chat from './sections/Chat.vue'
+import Profile from './sections/Profile.vue'
+import { users } from './constants/index.js'
 
 export default {
-  name: "App",
+  name: 'App',
   data() {
     return {
-      activeUserId: "user1",
-      users,
-    };
+      activeUserId: 'user1',
+      activeUserData: null,
+      users
+    }
   },
   components: {
     Users,
     Chat,
-    Profile,
+    Profile
   },
   methods: {
     setActiveUser(userId) {
-      this.activeUserId = userId;
+      this.activeUserId = userId
     },
+    calcActiveUserData() {
+      this.activeUserData = users.find((user) => user.id === this.activeUserId)
+    }
   },
-  computed: {
-    activeUserData() {
-      let user = users.find((user) => user.id === this.activeUserId);
-      console.log(user);
-      return user;
-    },
-  },
-};
+  watch: {
+    activeUserId: {
+      handler(newVal, oldVal) {
+        this.calcActiveUserData()
+      },
+      immediate: true
+    }
+  }
+}
 </script>
 
 <style>

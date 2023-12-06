@@ -11,8 +11,8 @@
 
 <script>
 export default {
-  props: ["imgUrl", "service"],
-};
+  props: ['imgUrl', 'service']
+}
 </script>
 
 <style scoped>

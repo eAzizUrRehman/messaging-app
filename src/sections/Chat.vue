@@ -74,36 +74,36 @@
 </template>
 
 <script>
-import Dp from "../components/Dp.vue";
-import Line from "../components/Line.vue";
-import Search from "../components/Search.vue";
-import Chatbox from "../components/Chatbox.vue";
+import Dp from '../components/Dp.vue'
+import Line from '../components/Line.vue'
+import Search from '../components/Search.vue'
+import Chatbox from '../components/Chatbox.vue'
 
 export default {
   data() {
     return {
-      searchValue: "",
-    };
+      searchValue: ''
+    }
   },
-  props: ["activeUserData"],
+  props: ['activeUserData'],
   components: {
     Dp,
     Line,
     Search,
-    Chatbox,
+    Chatbox
   },
   methods: {
     sendMsg() {
-      if (this.searchValue.trim() !== "") {
+      if (this.searchValue.trim() !== '') {
         this.activeUserData.chatHistory.push({
           message: this.searchValue.trim(),
-          fromMe: true,
-        });
+          fromMe: true
+        })
       }
-      this.searchValue = "";
-    },
-  },
-};
+      this.searchValue = ''
+    }
+  }
+}
 </script>
 
 <style scoped>

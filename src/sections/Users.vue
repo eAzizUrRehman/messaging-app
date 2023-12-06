@@ -11,30 +11,30 @@
 </template>
 
 <script>
-import Account from "../components/Account.vue";
-import User from "../components/User.vue";
-import Search from "../components/Search.vue";
+import Account from '../components/Account.vue'
+import User from '../components/User.vue'
+import Search from '../components/Search.vue'
 
 export default {
   data() {
     return {
-      searchValue: "",
-    };
+      searchValue: ''
+    }
   },
   components: {
     Account,
     User,
-    Search,
+    Search
   },
   methods: {
     setActiveUser(userId) {
-      this.$emit("user-selected", userId);
+      this.$emit('user-selected', userId)
     },
     passValue(value) {
-      this.searchValue = value;
-    },
-  },
-};
+      this.searchValue = value
+    }
+  }
+}
 </script>
 
 <style scoped>

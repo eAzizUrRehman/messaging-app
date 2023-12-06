@@ -4,8 +4,8 @@
 
 <script>
 export default {
-  props: ["imgUrl", "imgWidth", "imgHeight"],
-};
+  props: ['imgUrl', 'imgWidth', 'imgHeight']
+}
 </script>
 
 <style scoped>

@@ -12,7 +12,7 @@
           {{ user.name }}
         </p>
         <p class="user-lastMsg">
-          {{ user.chatHistory[user.chatHistory.length - 1].message || "" }}
+          {{ user.chatHistory[user.chatHistory.length - 1].message || '' }}
         </p>
       </div>
       <div class="user-details-right">
@@ -35,48 +35,50 @@
 </template>
 
 <script>
-import Dp from "../components/Dp.vue";
-import { users } from "../constants/index.js";
+import Dp from '../components/Dp.vue'
+import { users } from '../constants/index.js'
 
 export default {
   data() {
     return {
       users,
-      activeUserId: "user1",
-    };
+      activeUserId: 'user1'
+    }
   },
-  props: ["searchValue"],
+  props: ['searchValue'],
   components: {
-    Dp,
+    Dp
   },
   methods: {
     activeUser(userId) {
-      this.activeUserId = userId;
-      this.$emit("user-selected", userId);
-    },
+      this.activeUserId = userId
+      this.$emit('user-selected', userId)
+    }
   },
   computed: {
     filteredUsers() {
       return this.users.filter((user) =>
         user.name.toLowerCase().includes(this.searchValue.toLowerCase())
-      );
-    },
-  },
-};
+      )
+    }
+  }
+}
 </script>
 
 <style scoped>
 .user {
+  max-width: 100%;
+  max-height: 70px;
+  overflow: hidden;
   display: flex;
   align-items: start;
-  padding-bottom: 20px;
+  padding: 10px 2px;
+  margin-bottom: 20px;
   gap: 10px;
   cursor: pointer;
   border-radius: 10px;
+  overflow: hidden;
 }
-/* .user:hover {
-  background: white;
-} */
 
 .user-details {
   width: 100%;
@@ -94,6 +96,8 @@ export default {
   color: var(--text);
   font-weight: 400;
   font-size: 12px;
+  max-height: 30px;
+  overflow: hidden;
 }
 .last-msg-time {
   font-size: 12px;

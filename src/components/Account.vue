@@ -18,19 +18,19 @@
 </template>
 
 <script>
-import Dp from "./Dp.vue";
-import { account } from "../constants/index.js";
+import Dp from './Dp.vue'
+import { account } from '../constants/index.js'
 
 export default {
   data() {
     return {
-      account,
-    };
+      account
+    }
   },
   components: {
-    Dp,
-  },
-};
+    Dp
+  }
+}
 </script>
 
 <style scoped>

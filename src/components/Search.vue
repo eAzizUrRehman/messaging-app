@@ -12,18 +12,18 @@
 
 <script>
 export default {
-  props: ["searchText"],
+  props: ['searchText'],
   data() {
     return {
-      searchValue: "",
-    };
+      searchValue: ''
+    }
   },
   methods: {
     passValue() {
-      this.$emit("search-value", this.searchValue);
-    },
-  },
-};
+      this.$emit('search-value', this.searchValue)
+    }
+  }
+}
 </script>
 
 <style scoped>

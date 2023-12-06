@@ -37,30 +37,30 @@
 </template>
 
 <script>
-import Search from "../components/Search.vue";
-import Dp from "../components/Dp.vue";
-import Icon from "../components/Icon.vue";
-import Attachment from "../components/Attachment.vue";
-import { dummy } from "../constants/index.js";
-import chatIcon from "../assets/icons/chat-icon.svg";
-import videoIcon from "../assets/icons/video-icon.svg";
+import Search from '../components/Search.vue'
+import Dp from '../components/Dp.vue'
+import Icon from '../components/Icon.vue'
+import Attachment from '../components/Attachment.vue'
+import { dummy } from '../constants/index.js'
+import chatIcon from '../assets/icons/chat-icon.svg'
+import videoIcon from '../assets/icons/video-icon.svg'
 
 export default {
   data() {
     return {
       dummy,
       chatIcon,
-      videoIcon,
-    };
+      videoIcon
+    }
   },
-  props: ["name", "role", "imgUrl"],
+  props: ['name', 'role', 'imgUrl'],
   components: {
     Search,
     Dp,
     Icon,
-    Attachment,
-  },
-};
+    Attachment
+  }
+}
 </script>
 
 <style scoped>

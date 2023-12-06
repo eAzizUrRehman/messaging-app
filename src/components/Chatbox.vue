@@ -7,19 +7,20 @@
 </template>
 
 <script>
-import Msg from "../components/Msg.vue";
+import Msg from '../components/Msg.vue'
 
 export default {
   props: { chatHistory: Array },
   components: {
-    Msg,
-  },
-};
+    Msg
+  }
+}
 </script>
 
 <style scoped>
 .chat-box {
   max-height: 470px;
+  overflow-x: hidden;
   overflow-y: auto;
   padding-right: 20px;
   margin-bottom: 12px;
